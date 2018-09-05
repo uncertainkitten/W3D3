@@ -5,7 +5,7 @@ class CreateVisits < ActiveRecord::Migration[5.1]
       t.integer :url_id, null: false
       t.timestamps
     end
-    add_index :visits, :url_id, unique: true
+    add_index :visits, :url_id
     add_index :visits, :user_id
   end
 end

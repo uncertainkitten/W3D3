@@ -29,9 +29,9 @@ class ShortenedUrl < ApplicationRecord
     class_name: :Visit
 
   has_many :visitors,
-      Proc.new {distinct},
-      through: :visits,
-      source: :visitor
+    Proc.new {distinct},
+    through: :visits,
+    source: :visitor
 
   def num_clicks
     visits.count
